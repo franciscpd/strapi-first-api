@@ -12,10 +12,13 @@
 
 module.exports = {
   /**
-   * Simple example.
-   * Every monday at 1am.
+   * Execute every minute
    */
-  // '0 1 * * 1': () => {
-  //
-  // }
+  '0 * * * * *': async () => {
+    await strapi.services.email.sendEmail({
+      to: 'franciscpd@gmail.com',
+      subject: 'Send email of service',
+      html: '<p>Content</p>',
+    });
+  }
 };
