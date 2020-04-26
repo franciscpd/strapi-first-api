@@ -12,10 +12,9 @@
 
 module.exports = {
   /**
-   * Simple example.
-   * Every monday at 1am.
+   * Execute every second
    */
-  // '0 1 * * 1': () => {
-  //
-  // }
+  '* * * * * *': () => {
+    console.log('config/functions/cron.js');
+  }
 };
