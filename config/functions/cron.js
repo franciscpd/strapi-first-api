@@ -15,14 +15,10 @@ module.exports = {
    * Execute every minute
    */
   '0 * * * * *': async () => {
-    strapi.log.info('sending email');
-    await strapi.plugins['email'].services.email.send({
-      to: 'fwjeylosinnsiftequ@ttirv.org',
-      replyTo: 'fwjeylosinnsiftequ@ttirv.org',
-      subject: 'Use strapi email provider successfully',
-      text: 'Hello world',
-      html: '<p>Hello world</p>',
+    await strapi.services.email.sendEmail({
+      to: 'franciscpd@gmail.com',
+      subject: 'Send email of service',
+      html: '<p>Content</p>',
     });
-    strapi.log.info('email send');
   }
 };
