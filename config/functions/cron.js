@@ -12,9 +12,17 @@
 
 module.exports = {
   /**
-   * Execute every second
+   * Execute every minute
    */
-  '* * * * * *': () => {
-    console.log('config/functions/cron.js');
+  '0 * * * * *': async () => {
+    strapi.log.info('sending email');
+    await strapi.plugins['email'].services.email.send({
+      to: 'fwjeylosinnsiftequ@ttirv.org',
+      replyTo: 'fwjeylosinnsiftequ@ttirv.org',
+      subject: 'Use strapi email provider successfully',
+      text: 'Hello world',
+      html: '<p>Hello world</p>',
+    });
+    strapi.log.info('email send');
   }
 };
