@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_portfolio_simple_entries",
+  "info": {
+    "name": "simple-entry",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

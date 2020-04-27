@@ -1,8 +1,8 @@
 {
-  "kind": "collectionType",
-  "collectionName": "articles",
+  "kind": "singleType",
+  "collectionName": "blogs",
   "info": {
-    "name": "artigo"
+    "name": "blog"
   },
   "options": {
     "increments": true,
@@ -15,10 +15,9 @@
     "content": {
       "type": "richtext"
     },
-    "user": {
-      "via": "articles",
-      "plugin": "users-permissions",
-      "model": "user"
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }

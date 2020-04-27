@@ -16,9 +16,9 @@
       "type": "integer"
     },
     "user": {
+      "via": "pedidos",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "pedidos"
+      "model": "user"
     }
   }
 }

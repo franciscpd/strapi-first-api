@@ -33,6 +33,12 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "users": {
+      "via": "books",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
     }
   }
 }
