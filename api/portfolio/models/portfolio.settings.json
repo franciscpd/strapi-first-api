@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "portfolios",
+  "info": {
+    "name": "portfolio"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "portfolio_itemes": {
+      "type": "dynamiczone",
+      "components": [
+        "portfolio.simple-entry"
+      ]
+    }
+  }
+}

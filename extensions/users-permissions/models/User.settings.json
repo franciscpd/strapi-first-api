@@ -54,12 +54,19 @@
       "configurable": false
     },
     "articles": {
-      "via": "user",
-      "collection": "article"
+      "collection": "article",
+      "via": "user"
     },
     "pedidos": {
-      "via": "user",
-      "collection": "pedido"
+      "collection": "pedido",
+      "via": "user"
+    },
+    "books": {
+      "collection": "book",
+      "via": "users"
+    },
+    "phone_number": {
+      "type": "string"
     }
   }
 }
